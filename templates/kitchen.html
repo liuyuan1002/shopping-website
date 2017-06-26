@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    【宝淘】 首页
+{% endblock %}
+
+{% block nav %}
+    {% include 'nav.html' %}
+{% endblock %}
+{% block carousel %}
+    {% include 'carousel.html' %}
+{% endblock %}
+{% block content %}
+   <div style="margin-top: 20px">
+        <div class="w1240">
+            <div class="icon"><img src="/static/images/cc.png"> <a>美味餐厨</a> </div>
+        </div>
+    </div>
+
+    <div class="w1240">
+        <ul class="m-itemList m-itemList-level2Category">
+            {% for i in cc %}
+                <li class="item">
+                    <div class="m-product">
+                    <span></span>
+                    <div class="hd">
+                         <a href="/goods/{{ i.goods_id }}">
+                             <img src="static/images/goods/{{ i.goods_id}}.jpg" class ="img">
+                         </a>
+                    </div>
+                    <div class="bd">
+                         <a href="/goods/{{ i.goods_id }}">
+                        <h4 class="name">{{ i.goods_name }}</h4>
+                         </a>
+                        <p style="color: #050505;font-weight: bold;text-align:center" >{{ i.goods_introduce }}</p>
+                        <p class="price">&yen;{{ i.goods_price }}</p>
+                        <hr>
+                    </div>
+                </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="clear"></div>
+
+{% endblock %}

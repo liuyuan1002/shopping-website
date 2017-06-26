@@ -1,0 +1,26 @@
+
+<div class="header-main">
+	<div class="w1240">
+		<a class="fl logo " href="#"><img src="/static/images/top_Logo.png" alt=""></a>
+		<div class="fr site-searchbox">
+			<div class="searchbox fl">
+{#			<form action="" accept-charset="utf-8" enctype="multipart/form-data" method="get" class="form-horizontal" id="frm-sub" name="frm-sub">#}
+                <input class="tex fl" type="text"  placeholder="搜索宝淘商品" value="" id="search-text">
+			    <input type="submit" class="butn fr" value="" id="toSearch">
+{#            </form>#}
+            </div>
+            <div class="right-carbox fr">
+    			<a class="shopcar" href=" ">购物车</a>
+                <div class="sub-car-wrap">
+                    <div >购物车中还没有商品，赶紧选购吧！</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#toSearch").click(function () {
+        var searchtext = $("#search-text").val();
+        window.location.href="http://127.0.0.1:8000/search/" + searchtext;
+    })
+</script>

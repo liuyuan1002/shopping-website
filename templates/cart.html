@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ username }}
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="w1240" >
+        <ul class="nav navbar-default navbar-nav">
+
+          <li role="presentation" class="active navbar-nav"><a href="">购物车</a></li>
+          <li role="presentation" class="navbar-nav"><a href="">个人信息</a></li>
+          <li role="presentation" class="navbar-nav"><a href="">订单详情</a></li>
+        </ul>
+
+    <table class="table table-striped" style="text-align: center">
+        <tr>
+            <td> 商品</td>
+            <td> 单价</td>
+            <td> 数量</td>
+            <td> 小计</td>
+            <td> </td>
+        </tr>
+        {% for goods in good %}
+            <tr class="td">
+            <td style="width: 200px">
+                <a href="/goods/{{ goods.goods_id }}">
+                    <img src="/static/images/goods/{{ goods.goods_id}}.jpg" class ="cartimg">
+                </a>
+            </td>
+            <td > {{ goods.unit_price }}</td>
+            <td> {{ goods.quantuty }}</td>
+            <td> {{ goods.sum }}</td>
+            <td>
+                <a href="/removeitem/{{ goods.goods_id }}">
+                    <img src="/static/images/delete.png" style="width: 30px">
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="clear"></div>
+    <span></span>
+    <hr>
+    <div>
+        <span>
+            商品总价：{{ user.total }}
+        </span>
+    </div>
+    </div>
+{% endblock %}

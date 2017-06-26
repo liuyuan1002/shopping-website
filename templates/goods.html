@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    【{{ good.goods_introduce }}】&nbsp;{{ good.goods_name }}
+{% endblock %}
+
+{% block nav %}
+    {% include 'nav.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="w1240">
+        <div class="bread-nav">
+            <a href="/">首页</a>
+            <span class="fl"> > </span>
+            <a >{% if good.category == 0 %}
+                    美味餐厨
+                {% elif good.category == 1%}
+                    家纺家饰
+                {% endif %}
+            </a>
+            <span class="fl"> > </span>
+            <span class="fl">{{ good.goods_introduce }}</span>
+        </div>
+
+        <div class="pro-infowrap">
+            <div class="top-main-mess seckill-infotop">
+                <div class="left-pro-img fl">
+                    <div class="bigimg">
+                        <img src="/static/images/goods/{{ good.goods_id }}.jpg" alt="" >
+                    </div>
+                </div>
+
+                <div class="right-pro-cont fr">
+                    {% if good.goods_introduce != '' %}
+                        <span class="font-intro">{{ good.goods_introduce }}</span>
+                        <span class="font-name"> {{ good.goods_name }}</span>
+                    {% else %}
+                        <span class="font-intro">{{ good.goods_name }}</span>
+                    {% endif %}
+
+                    <p class="lh19">特惠价</p>
+                    <p class="price">{{ good.goods_price }} <span class="f12">元</span></p>
+
+                    <div class="evalute-mess">
+                            <div class="star fl star5"></div>
+                            <span class="fr font" style="padding-right: 30px">已售{{ good.sales_Volume }}件</span>
+                    </div>
+                    <div class="linkbox-join">
+
+                            <a class="fl buycar" href="/additem/{{ good.goods_id }}/1">加入购物车</a>
+                            <span class="fl collect "></span>
+
+                    </div>
+
+                </div>
+             </div>
+
+            <div class="row" style="line-height: 34px">
+                <div class="col-md-3" style="text-align: center">商品详情</div>
+                <div class="col-md-3" style="text-align: center">商品参数</div>
+                <div class="col-md-3" style="text-align: center">商品评价</div>
+                <div class="col-md-3" style="text-align: center"></div>
+            </div>
+            <hr>
+            <div class="info-img">
+                {% for i in urlImg %}
+                    <p>
+                        <img src = " {{ i }}">
+                    </p>
+                {% endfor %}
+            </div>
+    </div>
+    <div class="clear"></div>
+    </div>
+{% endblock %}
+

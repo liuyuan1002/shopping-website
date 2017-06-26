@@ -1,0 +1,24 @@
+{% extends 'loginBase.html' %}
+{% block title %} 【宝淘】 用户注册 {% endblock %}
+
+{% block content %}
+          <div class="login-center">
+        <div class="titbox">注册宝淘帐号</div>
+        <div class="contwrap">
+            <form action="{% url 'register' %}" method="post" accept-charset="utf-8" enctype="multipart/form-data" class="form-horizontal" >
+                {% csrf_token %}
+                <input type="text" class="tex" name="username" id="username" placeholder="请输入手机号" >
+                <input type="password"  class="tex pass-top" name="password" id="password" placeholder="请输入6-12位密码" >
+                {% if inputFormat == False %}
+                    <p class="red-p"> 用户名密码不小于六位</p>
+                {% endif %}
+                {% if userExit %}
+                    <p class="red-p"> 用户名存在，请重新输入</p>
+                {% endif %}
+                <input type="submit" class="submit" value="立即注册">
+
+                <p>点击“立即注册”，即表示您同意并愿意遵守宝淘用户协议</p>
+            </form>
+        </div>
+          </div>
+{% endblock %}
