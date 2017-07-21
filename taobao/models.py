@@ -2,9 +2,8 @@ from django.db import models
 
 # Create your models here.
 
-class User(models.Model):
+class User_cart(models.Model):
     username = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
     total = models.IntegerField(default=0)
     num = models.IntegerField(default=0)
 

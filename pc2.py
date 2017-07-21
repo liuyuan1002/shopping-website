@@ -10,9 +10,9 @@ def insertMysql(sql):
     config = {
               'host':'127.0.0.1',
               'port':3306,
-              'passwd': "root",
+              'passwd': "liuyuan",
               'user':'root',
-              'db':'taobao1',
+              'db':'taobao',
               'charset':'utf8'
               }
     db = pymysql.connect(**config)
@@ -58,7 +58,7 @@ for c in b:
 
     sql = 'INSERT INTO taobao_goods (category,goods_id,goods_price,goods_name,goods_introduce)  VALUES '
     sql = sql +  "({},'{}',{},'{}','{}');".format(
-                0,
+                1,
                 str(c),
                 float(price),
                 title,
