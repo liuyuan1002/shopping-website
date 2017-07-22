@@ -6,6 +6,10 @@ pip install django-bootstrap-toolkit
 pip install django-cart
 '''
 
+## 2017.7.22
+优化urls
+优化了views 中cart部分
+
 ## 2017.7.21
 使用Django 的auth认证
 

@@ -13,22 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
-from taobao import views
+
 
 urlpatterns = [
-    url(r'^$', views.index),
-    url(r'^hot$',views.hot),
-    url(r'^kitchen',views.kitchen),
-    url(r'^homeTextiles',views.home),
-    url(r'^login$', views.login_view,name='login'),
-    url(r'^logout', views.logout_view),
-    url(r'^register$', views.register,name='register'),
-    url(r'^goods/(?P<goods_id>\d+$)',views.goodsDetail,name='goodsDetail'),
     url(r'^admin/', admin.site.urls),
-    url(r'^cart/$',views.cart),
-    url(r'^search/(\w+)',views.search),
-    url(r'^additem/(\d+)/(\d+)/$',views.add_to_cart,name='additem-url'),
-    url(r'^removeitem/(\d+)/$',views.remove_from_cart,name='removeitem-url'),
+    url(r'^taobao/',include('taobao.urls')),
+
 ]

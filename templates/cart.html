@@ -26,7 +26,7 @@
         {% for goods in good %}
             <tr class="td">
             <td style="width: 200px">
-                <a href="/goods/{{ goods.goods_id }}">
+                <a href="/taobao/goods/{{ goods.goods_id }}">
                     <img src="/static/images/goods/{{ goods.goods_id}}.jpg" class ="cartimg">
                 </a>
             </td>
@@ -34,8 +34,8 @@
             <td> {{ goods.quantuty }}</td>
             <td> {{ goods.sum }}</td>
             <td>
-                <a href="/removeitem/{{ goods.goods_id }}">
-                    <img src="/static/images/delete.png" style="width: 30px">
+                <a href="/taobao/removeitem/{{ goods.goods_id }}">
+                    <img src="/taobao/static/images/delete.png" style="width: 30px">
                 </a>
             </td>
         </tr>

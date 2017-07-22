@@ -1,10 +1,9 @@
 from django.shortcuts import render,render_to_response
 from django.http import HttpResponse,HttpResponseRedirect
 from django.template import RequestContext
-from django import forms
+
 from taobao.models import User_cart,goods,cartItem
 from .forms import UserForm
-from django.template.loader import get_template
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import redirect
 import os
@@ -12,6 +11,7 @@ import os
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -28,11 +28,12 @@ def user_session(req):
         context['username'] = username
     else:
         context['isLogin'] = False
+        context['username'] = ''
     return context
 
 #注册
 @csrf_exempt
-def register(req):
+def register_view(req):
     context = {'inputFormat':True,'userExit':False}
     if req.method == 'POST':
         form = UserForm(req.POST)
@@ -54,6 +55,7 @@ def register(req):
             user = User.objects.create_user(username=username, password=password)
             user.save()
             User_cart.objects.create(username=username)
+
             req.session['username'] = username
             auth.login(req, user)
             return redirect('/')
@@ -88,7 +90,6 @@ def login_view(req):
 
 #首页
 def index(req):
-    username = ''
     context = user_session(req)
     cc =  goods.objects.all().filter(category = 0)[:8]
     jf =  goods.objects.all().filter(category = 1)[:8]
@@ -97,12 +98,12 @@ def index(req):
     context['jf'] = jf
     context['rm'] = rm
 
-    context['username'] = username
     return render(req, 'index.html', context)
 
 #退出
 def logout_view(req):
     #清理cookie里保存username
+    #req.session.flush()
     logout(req)
     return redirect('/')
 
@@ -124,54 +125,36 @@ def goodsDetail(req,goods_id):
     return  render(req,'goods.html',context)
 
 def hot(req):
-    username = ''
     context = user_session(req)
     rm = goods.objects.order_by('sales_Volume').all()[:36]
     context['rm']=rm
-    context['username'] = username
     return render(req, 'hot.html', context)
 
 def kitchen(req):
-    username = ''
     context = user_session(req)
     cc = goods.objects.all().filter(category = 0)[:16]
     context['cc'] = cc
-
-    context['username'] = username
     return render(req, 'kitchen.html', context)
 
 def home(req):
-    username = ''
     context = user_session(req)
     jf = goods.objects.all().filter(category=1)[:16]
     context['jf'] = jf
-
-    context['username'] = username
     return render(req, 'homeTextiles.html', context)
 
+@login_required
 def cart(req):
+    context = user_session(req)
 
-    context = {'isLogin': True}
-    username = ''
-    if 'username' in req.session:
-        username = req.session['username']
-    else:
-        context['isLogin'] = False
-    context['username'] = username
-
-    user = User_cart.objects.get(username__exact=username)
-    good = cartItem.objects.all().filter(username__exact = username)
+    user = User_cart.objects.get(username__exact=context['username'])
+    good = cartItem.objects.all().filter(username__exact = context['username'])
     context['user'] = user
     context['good'] = good
     return render(req, 'cart.html', context)
 
+@login_required
 def add_to_cart(req,goods_id,quantity):
-    context = {'isLogin':True}
-    username = ''
-    if 'username' in req.session:
-        username = req.session['username']
-    else:
-        context['isLogin'] = False
+    context = user_session(req)
 
     good = goods.objects.get(goods_id__exact=goods_id)
     sum = int(quantity) * good.goods_price
@@ -182,27 +165,23 @@ def add_to_cart(req,goods_id,quantity):
         item.sum += sum
         item.save()
     else:
-        cartItem.objects.create(quantuty=quantity,unit_price=good.goods_price,goods_id= goods_id,username=username,sum = sum)
+        cartItem.objects.create(quantuty=quantity,unit_price=good.goods_price,goods_id= goods_id,username=context['username'],sum = sum)
 
 
-    use = User_cart.objects.get(username=username)
+    use = User_cart.objects.get(username=context['username'])
     use.num += int(quantity)
     use.total += int(good.goods_price) * int (quantity)
     use.save()
 
     return  redirect('/')
 
+@login_required
 def remove_from_cart(req,goods_id):
-    context = {'isLogin': True}
-    username = ''
-    if 'username' in req.session:
-        username = req.session['username']
-    else:
-        context['isLogin'] = False
+    context = user_session(req)
 
-    good = cartItem.objects.get(goods_id = goods_id,username = username)
+    good = cartItem.objects.get(goods_id = goods_id,username = context['username'])
 
-    user = User_cart.objects.get(username = username)
+    user = User_cart.objects.get(username = context['username'])
 
     user.num -= int(good.quantuty)
     user.total -=  int(good.unit_price) * int(good.quantuty)
