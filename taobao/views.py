@@ -58,7 +58,7 @@ def register_view(req):
 
             req.session['username'] = username
             auth.login(req, user)
-            return redirect('/')
+            return redirect('/taobao/')
     else:
         context = {'isLogin':False}
     return  render(req,'register.html',context)
@@ -79,7 +79,7 @@ def login_view(req):
                 #比较成功，跳转index
                 auth.login(req,user)
                 req.session['username'] = username
-                return redirect('/')
+                return redirect('/taobao/')
             else:
                 #比较失败，还在login
                 context = {'isLogin': False,'pawd':False}
@@ -105,7 +105,7 @@ def logout_view(req):
     #清理cookie里保存username
     #req.session.flush()
     logout(req)
-    return redirect('/')
+    return redirect('/taobao/')
 
 def goodsDetail(req,goods_id):
     context = user_session(req)
@@ -173,7 +173,7 @@ def add_to_cart(req,goods_id,quantity):
     use.total += int(good.goods_price) * int (quantity)
     use.save()
 
-    return  redirect('/')
+    return  redirect('/taobao/')
 
 @login_required
 def remove_from_cart(req,goods_id):
@@ -188,7 +188,7 @@ def remove_from_cart(req,goods_id):
     user.save()
 
     good.delete()
-    return redirect('/cart/')
+    return redirect('/taobao/cart/')
 
 def search(req,keyword):
     good = goods.objects.filter(goods_introduce__contains=keyword)

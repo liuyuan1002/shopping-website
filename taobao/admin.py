@@ -4,6 +4,15 @@ from . import  models
 
 # admin.site.register(models.User)
 
-admin.site.register(models.User_cart)
-admin.site.register(models.goods)
-admin.site.register(models.cartItem)
+class goodsAdmin(admin.ModelAdmin):
+    list_display = ['id','goods_name','goods_price','goods_Stock']
+
+class user_cartAdmin(admin.ModelAdmin):
+    list_display = ['id','username','num','total']
+
+class cartItemAdmin(admin.ModelAdmin):
+    list_display = ['id','username','unit_price','quantuty']
+
+admin.site.register(models.User_cart,user_cartAdmin)
+admin.site.register(models.goods,goodsAdmin)
+admin.site.register(models.cartItem,cartItemAdmin)
