@@ -23,22 +23,22 @@
             <td> 小计</td>
             <td> </td>
         </tr>
-        {% for goods in good %}
+        {% for i in good %}
             <tr class="td">
             <td style="width: 200px">
-                <a href="/taobao/goods/{{ goods.goods_id }}">
-                    <img src="/static/images/goods/{{ goods.goods_id}}.jpg" class ="cartimg">
+                <a href="/taobao/goods/{{ i.goods.goods_id }}">
+                    <img src="/static/images/goods/{{ i.goods.goods_id}}.jpg" class ="cartimg">
                 </a>
             </td>
-            <td > {{ goods.unit_price }}</td>
-            <td> {{ goods.quantuty }}</td>
-            <td> {{ goods.sum }}</td>
+            <td > {{ i.unit_price }}</td>
+            <td> {{ i.quantuty }}</td>
+            <td> {{ i.sum }}</td>
             <td>
-                <a href="/taobao/removeitem/{{ goods.goods_id }}">
-                    <img src="/taobao/static/images/delete.png" style="width: 30px">
+                <a href="/taobao/removeitem/{{ i.goods.goods_id }}">
+                    <img src="/static/images/delete.png" style="width: 30px">
                 </a>
             </td>
-        </tr>
+            </tr>
         {% endfor %}
     </table>
 
@@ -47,7 +47,7 @@
     <hr>
     <div>
         <span>
-            商品总价：{{ user.total }}
+            商品总价：{% if user %}{{ user.total }}{% else %}0{% endif %}￥
         </span>
     </div>
     </div>

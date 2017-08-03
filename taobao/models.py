@@ -24,9 +24,8 @@ class goods(models.Model):
 class cartItem(models.Model):
     quantuty = models.IntegerField('商品数量',default=1)
     unit_price = models.DecimalField('单价',max_digits=10,decimal_places=2)
-    goods_id = models.ForeignKey(goods,related_name='goods_set')
+    goods = models.ForeignKey(goods,default=None)
     username = models.CharField('用户名',max_length=50,default='')
     sum = models.DecimalField('总计',max_digits=10,decimal_places=2)
     def __str__(self):
         return self.username
-

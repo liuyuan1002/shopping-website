@@ -5,6 +5,9 @@
 pip install django-bootstrap-toolkit
 pip install django-cart
 '''
+## 2017.8.4
+cart 修改
+
 ## 2017.7.26
 优化了数据库表格结构
 修改的admin的显示内容

@@ -54,7 +54,7 @@ def register_view(req):
 
             user = User.objects.create_user(username=username, password=password)
             user.save()
-            User_cart.objects.create(username=username)
+            User_cart.objects.create(username=username).save()
 
             req.session['username'] = username
             auth.login(req, user)
@@ -67,6 +67,8 @@ def register_view(req):
 @csrf_exempt
 def login_view(req):
     context = {}
+
+    next_to = req.GET.get('next-to', '/taobao/')
     if req.method == 'POST':
         form = UserForm(req.POST)
         if form.is_valid():
@@ -79,7 +81,7 @@ def login_view(req):
                 #比较成功，跳转index
                 auth.login(req,user)
                 req.session['username'] = username
-                return redirect('/taobao/')
+                return  redirect(next_to)
             else:
                 #比较失败，还在login
                 context = {'isLogin': False,'pawd':False}
@@ -142,30 +144,33 @@ def home(req):
     context['jf'] = jf
     return render(req, 'homeTextiles.html', context)
 
-@login_required
+@login_required(login_url='/taobao/login')
 def cart(req):
     context = user_session(req)
+    try:
+        user = User_cart.objects.get(username__exact=context['username'])
+        good = cartItem.objects.all().filter(username__exact = context['username'])
+    except:
+        user , good= None , None
 
-    user = User_cart.objects.get(username__exact=context['username'])
-    good = cartItem.objects.all().filter(username__exact = context['username'])
     context['user'] = user
     context['good'] = good
     return render(req, 'cart.html', context)
 
-@login_required
+@login_required(login_url='/taobao/login')
 def add_to_cart(req,goods_id,quantity):
     context = user_session(req)
 
     good = goods.objects.get(goods_id__exact=goods_id)
     sum = int(quantity) * good.goods_price
 
-    if cartItem.objects.all().filter(goods_id = goods_id):
-        item = cartItem.objects.get(goods_id = goods_id)
+    if cartItem.objects.all().filter(goods=good):
+        item = cartItem.objects.get(goods=good)
         item.quantuty += int(quantity)
         item.sum += sum
         item.save()
     else:
-        cartItem.objects.create(quantuty=quantity,unit_price=good.goods_price,goods_id= goods_id,username=context['username'],sum = sum)
+        cartItem.objects.create(quantuty=quantity,unit_price=good.goods_price,goods=good,username=context['username'],sum = sum)
 
 
     use = User_cart.objects.get(username=context['username'])
@@ -173,13 +178,15 @@ def add_to_cart(req,goods_id,quantity):
     use.total += int(good.goods_price) * int (quantity)
     use.save()
 
-    return  redirect('/taobao/')
+    return  redirect('/taobao/cart/')
 
-@login_required
+# https://docs.djangoproject.com/en/1.11/topics/auth/default/#the-login-required-decorator
+@login_required()
 def remove_from_cart(req,goods_id):
     context = user_session(req)
 
-    good = cartItem.objects.get(goods_id = goods_id,username = context['username'])
+    good = goods.objects.get(goods_id__exact=goods_id)
+    good = cartItem.objects.get(goods = good,username = context['username'])
 
     user = User_cart.objects.get(username = context['username'])
 
@@ -189,6 +196,7 @@ def remove_from_cart(req,goods_id):
 
     good.delete()
     return redirect('/taobao/cart/')
+
 
 def search(req,keyword):
     good = goods.objects.filter(goods_introduce__contains=keyword)

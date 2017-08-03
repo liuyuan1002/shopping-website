@@ -11,7 +11,7 @@ class user_cartAdmin(admin.ModelAdmin):
     list_display = ['id','username','num','total']
 
 class cartItemAdmin(admin.ModelAdmin):
-    list_display = ['id','username','unit_price','quantuty']
+    list_display = ['id','username','goods_id','unit_price','quantuty']
 
 admin.site.register(models.User_cart,user_cartAdmin)
 admin.site.register(models.goods,goodsAdmin)

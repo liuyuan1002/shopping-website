@@ -32,11 +32,11 @@
             </div>
              <div class="link">
             {% if isLogin == False%}
-                <a href="login">登录</a>
-                <a class="rt" href="register">注册</a>
+                <a href="/taobao/login">登录</a>
+                <a class="rt" href="/taobao/register">注册</a>
             {% else%}
-                <a href="cart">{{ username }}</a>
-                <a href="logout" >退出</a>
+                <a href="/taobao/cart">{{ username }}</a>
+                <a href="/taobao/logout" >退出</a>
             {% endif %}
              </div>
               <div class="clear"></div>
