@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 
 from .forms import UserForm
 from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 
 from django.contrib.auth.decorators import permission_required
 
@@ -10,6 +11,18 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 # Create your views here.
+
+#判断是否登录
+def user_session(req):
+    context = {}
+    if 'username' in req.session:
+        username = req.session['username']
+        context['isLogin'] = True
+        context['username'] = username
+    else:
+        context['isLogin'] = False
+        context['username'] = ''
+    return context
 
 
 def login_view(req):
@@ -37,6 +50,15 @@ def login_view(req):
 
 
 @login_required(login_url='/console/login')
-@permission_required('crawlerConsole.add_pclist',login_url='URL403.html')
+@permission_required('crawlerConsole.add_pclist',login_url='/error/403')
 def index(req):
-    return render(req,'consoleIndex.html',context={})
+    context = user_session(req)
+    return render(req,'consoleIndex.html',context)
+
+def error(req,index):
+    if index == '403':
+        return  HttpResponse(status=403)
+    if index == '404':
+        return HttpResponse(status=404)
+    if index == '500':
+        return  HttpResponse(status=500)

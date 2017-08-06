@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
-from taobao import views
+from crawlerConsole import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^taobao/',include('taobao.urls')),
     url(r'^console/',include('crawlerConsole.urls')),
+    url(r'^error/(\d+)$',views.error),
 
     # url(r'^accounts/login/',views.login_view,name='login'),
 ]
