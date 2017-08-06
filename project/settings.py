@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_URL = '/taobao/login/'
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +40,7 @@ INSTALLED_APPS = [
     'django.forms',
     'cart',
     'taobao',
+    'crawlerConsole',
 ]
 
 MIDDLEWARE = [
@@ -59,8 +58,9 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'taobao/templates'),
+                 os.path.join(BASE_DIR, 'crawlerConsole/templates'),
+                 os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

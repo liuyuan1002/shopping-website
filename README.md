@@ -5,6 +5,10 @@
 pip install django-bootstrap-toolkit
 pip install django-cart
 '''
+##2017.08.06
+添加爬虫app
+增加控制爬虫启动页面
+
 ## 2017.8.4
 cart 修改
 

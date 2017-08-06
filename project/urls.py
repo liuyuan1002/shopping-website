@@ -20,5 +20,7 @@ from taobao import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^taobao/',include('taobao.urls')),
+    url(r'^console/',include('crawlerConsole.urls')),
+
     # url(r'^accounts/login/',views.login_view,name='login'),
 ]

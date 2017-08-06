@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta content="width=device-width,user-scalable=yes" name="viewport" />
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <title>登录</title>
+</head>
+
+<body>
+    <div class="alert alert-success" role="alert" style="text-align:center;">
+        <strong>登陆</strong>
+      </div>
+    {% if pawd == False %}
+        <script>alert('登录失败！'); history.go(-1);</script>
+    {% endif %}
+  <center>
+   <form name="form1" action="{% url  'login' %}" onsubmit="return InputCheck(this)" method="post">
+       {% csrf_token %}
+    <div class="container">
+        <div class="input-group" style="width: 285px;text-align:center;">
+            <span class="input-group-addon">用户名</span>
+            <input name="username" type="text" class="form-control" required="" autofocus="" />
+        </div>
+     <br />
+     <div class="input-group" style="width: 285px;text-align:center;">
+      <span class="input-group-addon">密&nbsp&nbsp&nbsp&nbsp码</span>
+      <input name="password" type="password" class="form-control" required="" />
+     </div>
+     <br />
+     <input type="submit" class="btn btn-primary" value=" 确 定 " style="width: 185px;" />
+    </div>
+   </form>
+  </center>
+</body>
+</html>

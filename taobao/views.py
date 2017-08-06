@@ -181,7 +181,7 @@ def add_to_cart(req,goods_id,quantity):
     return  redirect('/taobao/cart/')
 
 # https://docs.djangoproject.com/en/1.11/topics/auth/default/#the-login-required-decorator
-@login_required()
+@login_required(login_url='/taobao/login')
 def remove_from_cart(req,goods_id):
     context = user_session(req)
 
