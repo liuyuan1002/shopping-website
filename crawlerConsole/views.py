@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from crawlerConsole.models import pcList
 
 from .forms import UserForm
 from django.views.decorators.csrf import csrf_exempt
@@ -10,7 +11,15 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
+from dwebsocket import require_websocket
+
+import json
+import os
+import re
 # Create your views here.
+
+from crawlerConsole.models import pcList
+# from django_datatables_view.base_datatable_view import BaseDatatableView
 
 #判断是否登录
 def user_session(req):
@@ -53,6 +62,9 @@ def login_view(req):
 @permission_required('crawlerConsole.add_pclist',login_url='/error/403')
 def index(req):
     context = user_session(req)
+    pclist = pcList.objects.all()
+    context['pclist'] = pclist
+
     return render(req,'consoleIndex.html',context)
 
 def error(req,index):
@@ -62,3 +74,31 @@ def error(req,index):
         return HttpResponse(status=404)
     if index == '500':
         return  HttpResponse(status=500)
+
+@csrf_exempt
+def startCommand(req):
+    if req.method == 'POST':
+        ret = {'status': 1001, 'error': ''}
+        pcid = req.POST.get('pcid',None)
+        command = req.POST.get('command',None)
+
+        pc = pcList.objects.get(id = pcid)
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        path = BASE_DIR + pc.path
+
+
+        # r = os.popen('python '+ path +' '+  command)
+        r = os.system('python ' + path + ' ' + command)
+
+        if pcid and command:
+            ret['status'] = 1002
+        else:
+            ret['error'] = 'pcid or command error'
+        return HttpResponse(json.dumps(ret))
+    return redirect('/console/')
+
+
+# @require_websocket
+# def echo_once(req):
+#     with open('cmdlog.txt', 'w+') as p:
+#         req.websocket.send(p.readline())

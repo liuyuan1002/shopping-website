@@ -2,8 +2,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import urllib.parse
-import urllib.request
+# import urllib.parse
+# import urllib.request
 import re
 import datetime
 import json
@@ -14,6 +14,7 @@ import csv
 import time
 
 
+BASE_PATH = os.path.dirname(__file__)
 
 def add_log(content):
     pass
@@ -33,13 +34,20 @@ def add_log(content):
     #     return False
 #
 #
+headers = {'Accept': '*/*',
+               'Accept-Language': 'en-US,en;q=0.8',
+               'Cache-Control': 'max-age=0',
+               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36',
+               'Connection': 'keep-alive',
+               'Referer': 'http://www.baidu.com/'
+               }
 
 
 def csvToMysql( keyword):
-    BaseInfoLink = u'./商品详情/' + keyword + u'/BaseInfo.csv'
-    ImpressionInfoLink = u'./商品详情/' + keyword + u'/ImpressionInfo.csv'
-    ShopInfoLink = u'./商品详情/' + keyword + u'/ShopInfo.csv'
-    CommentInfoLink = u'./商品详情/' + keyword + u'/CommentInfo.csv'
+    BaseInfoLink = BASE_PATH + u'/商品详情/' + keyword + u'/BaseInfo.csv'
+    ImpressionInfoLink = BASE_PATH + u'/商品详情/' + keyword + u'/ImpressionInfo.csv'
+    ShopInfoLink = BASE_PATH + u'/商品详情/' + keyword + u'/ShopInfo.csv'
+    CommentInfoLink = BASE_PATH + u'/商品详情/' + keyword + u'/CommentInfo.csv'
 
     def isNull(string = 'null'):
         if len(str(string)) < 1:
@@ -229,21 +237,21 @@ class suning_detail():
         self.shop_serve = ''
         self.shop_shipping = ''
 
-        if os.path.exists(u'./商品详情') == False:
-            os.mkdir(u'./商品详情')
+        if os.path.exists( BASE_PATH +u'/商品详情') == False:
+            os.mkdir(BASE_PATH +u'/商品详情')
 
-        if os.path.exists(u'./商品链接') == False:
-            os.mkdir(u'./商品链接')
+        if os.path.exists( BASE_PATH +u'/商品链接') == False:
+            os.mkdir( BASE_PATH +u'/商品链接')
 
-        if os.path.exists(u'./商品详情/'+ self.keyword) == False:
-            os.mkdir(u'./商品详情/'+ self.keyword)
+        if os.path.exists( BASE_PATH +u'/商品详情/'+ self.keyword) == False:
+            os.mkdir( BASE_PATH +u'/商品详情/'+ self.keyword)
 
-        self.BaseInfoLink = u'./商品详情/'+ self.keyword + u'/BaseInfo.csv'
-        self.ImpressionInfoLink = u'./商品详情/'+ self.keyword + u'/ImpressionInfo.csv'
-        self.ShopInfoLink = u'./商品详情/' + self.keyword + u'/' u'/ShopInfo.csv'
-        self.CommentInfoLink = u'./商品详情/' + self.keyword + u'/'+ u'/CommentInfo.csv'
+        self.BaseInfoLink =  BASE_PATH +u'/商品详情/'+ self.keyword + u'/BaseInfo.csv'
+        self.ImpressionInfoLink = BASE_PATH + u'/商品详情/'+ self.keyword + u'/ImpressionInfo.csv'
+        self.ShopInfoLink =  BASE_PATH +u'/商品详情/' + self.keyword + u'/' u'/ShopInfo.csv'
+        self.CommentInfoLink =  BASE_PATH +u'/商品详情/' + self.keyword + u'/'+ u'/CommentInfo.csv'
 
-        self.file = open(u"./商品链接/" + self.keyword + u".txt")
+        self.file = open( BASE_PATH +u"/商品链接/" + self.keyword + u".txt")
 
     def creatTable(self):
         list = ['itemid',
@@ -292,6 +300,8 @@ class suning_detail():
     def saveTable(self):
         self.BaseInfo.to_csv(self.BaseInfoLink)
         self.ImpressionInfo.to_csv(self.ImpressionInfoLink)
+
+        self.ShopInfo.drop_duplicates(['shopTitle'])
         self.ShopInfo.to_csv(self.ShopInfoLink)
         self.CommentInfo.to_csv(self.CommentInfoLink)
 
@@ -311,7 +321,7 @@ class suning_detail():
 
             # do something
             try:
-                self.html = requests.get(self.goods_url).text
+                self.html = requests.get(self.goods_url,headers = headers).text
                 self.soup = BeautifulSoup(self.html,'lxml')
             except Exception:
                 add_log(str(self.itemid) + ' '+ str(self.goods_url) + ' Error')
@@ -374,7 +384,7 @@ class suning_detail():
     def getPrice(self):
         Price_link = 'http://pas.suning.com/nspcsale_0_000000000'+str(self.itemid)+'_000000000'+str(self.itemid)+'_'+str(self.shopid)+'_160_732_7320101.html'
         try:
-            Price = requests.get(Price_link).text
+            Price = requests.get(Price_link,headers = headers).text
             Price = Price[7:-2]
             Price = json.loads((Price))
             self.goods_price = Price['data']['price']['saleInfo'][0]['promotionPrice']
@@ -394,7 +404,7 @@ class suning_detail():
         if int(self.shopid) == 0:
             url = 'http://review.suning.com/ajax/getShopScore/0000000000-shopReviewScore.htm?callback=shopReviewScore'
             try:
-                html = requests.get(url).text
+                html = requests.get(url,headers = headers).text
                 self.shop_describe = re.search('\"qualityStar\":\"(.*?)\",', html).group(1)
                 self.shop_serve = re.search('\"attitudeStar\":\"(.*?)\",', html).group(1)
                 self.shop_shipping = re.search('\"deliverySpeedStar\":\"(.*?)\",', html).group(1)
@@ -406,7 +416,7 @@ class suning_detail():
         else :
             url = 'http://shop.suning.com/jsonp/'+str(int(self.shopid))+'/shopinfo/shopinfo.html'
             try:
-                html = requests.get(url).text
+                html = requests.get(url,headers = headers).text
                 self.shop_describe = re.search('\"Qstar\":\"(.*?)\",', html).group(1)
                 self.shop_serve = re.search('\"Astar\":\"(.*?)\",', html).group(1)
                 self.shop_shipping = re.search('\"Dstar\":\"(.*?)\",',html).group(1)
@@ -420,7 +430,7 @@ class suning_detail():
     def getJudgenum(self):
         juglink = 'http://review.suning.com/ajax/review_satisfy/general-000000000'+str(self.itemid)+'-'+str(self.shopid)+'-----satisfy.htm?callback=satisfy'
         try:
-            jug = requests.get(juglink).text
+            jug = requests.get(juglink,headers = headers).text
             jug = jug[8:-1]
             jug = json.loads(jug)['reviewCounts'][0]
             self.goods_judge_num = jug['totalCount']
@@ -439,7 +449,7 @@ class suning_detail():
         review_link = 'http://review.suning.com/ajax/getreview_labels/general-000000000'+str(self.itemid)+'-'+str(self.shopid)+'-----commodityrLabels.htm'
 
         try:
-            html = requests.get(review_link).text
+            html = requests.get(review_link,headers = headers).text
             a = re.findall('\"labelName\":\"(.*?)\",\"labelCnt\":(.*?)}', html)
             for i in a:
                 self.impressions += i[0] + ':'+i[1] + '-'
@@ -453,7 +463,7 @@ class suning_detail():
         try:
             time.sleep(5)
             good_link = 'http://review.suning.com/ajax/review_lists/general-000000000'+str(int(self.itemid))+'-'+str(self.shopid)+'-good-1-timeSort-10-----reviewList.htm?callback=reviewList'
-            html = requests.get(good_link).text
+            html = requests.get(good_link,headers = headers).text
             goodgenral = re.findall('\"content\":\"(.*?)\",\"publishTime\":\"(.*?)\"', html)
             id = 1
             for i in goodgenral:
@@ -462,7 +472,7 @@ class suning_detail():
                 print(i[0].replace('\n','') + i[1])
 
             normal_link='http://review.suning.com/ajax/review_lists/general-000000000'+str(int(self.itemid))+'-'+str(self.shopid)+'-normal-1-timeSort-10-----reviewList.htm?callback=reviewList'
-            html = requests. get(normal_link).text
+            html = requests. get(normal_link,headers = headers).text
             normalgenral = re.findall('\"content\":\"(.*?)\",\"publishTime\":\"(.*?)\"', html)
             id = 1
             for i in normalgenral:
@@ -471,7 +481,7 @@ class suning_detail():
                 print(i[0].replace('\n','') + i[1])
 
             bad_link = 'http://review.suning.com/ajax/review_lists/general-000000000' + str(int(self.itemid)) + '-' + str(self.shopid) + '-bad-1-timeSort-10-----reviewList.htm?callback=reviewList'
-            html = requests.get(bad_link).text
+            html = requests.get(bad_link,headers = headers).text
             badgenral = re.findall('\"content\":\"(.*?)\",\"publishTime\":\"(.*?)\"', html)
             id = 1
             for i in badgenral:
@@ -498,7 +508,7 @@ class suning_link():
         self.keyword = str
         add_log('suning爬虫 启动' + self.keyword)
         self.pagenum = -1
-        self.filename = u"./商品链接/" + self.keyword + u".txt"
+        self.filename = BASE_PATH +  u"/商品链接/" + self.keyword + u".txt"
         open(self.filename, 'w+')
         self.loop()
 
@@ -511,7 +521,7 @@ class suning_link():
         """这个函数用于得到摸个一号店下面所有的链接"""
         tb2 = self.getNextUrl()
         print(tb2)
-        html = requests.get(tb2).text
+        html = requests.get(tb2,headers = headers).text
 
         while(html):
             soup = BeautifulSoup(html, 'lxml')
@@ -527,23 +537,30 @@ class suning_link():
             print(len(a))
             tb2 = self.getNextUrl()
             print(tb2)
-            html = requests.get(tb2).text
+            html = requests.get(tb2,headers = headers).text
         add_log('商品链接爬取成功')
 
 
 if __name__ == '__main__':
-    print("请输入关键字：")
-    list = ['伊利qq星','伊利优酸乳','伊利味可滋','伊利安慕希',
-            '伊利无菌砖','伊利纯牛奶','伊利舒化奶','伊利谷粒多',
-            '伊利金典有机纯牛奶','特仑苏','甜小嗨','蒙牛奶特',
-            '蒙牛新养道','蒙牛早餐奶','蒙牛纯牛奶','蒙牛纯甄',
-            '蒙牛谷粒早餐']
+    # list = ['伊利qq星','伊利优酸乳','伊利味可滋','伊利安慕希',
+    #         '伊利无菌砖','伊利纯牛奶','伊利舒化奶','伊利谷粒多',
+    #         '伊利金典有机纯牛奶','特仑苏','甜小嗨','蒙牛奶特',
+    #         '蒙牛新养道','蒙牛早餐奶','蒙牛纯牛奶','蒙牛纯甄',
+    #         '蒙牛谷粒早餐']
+
+    keyword = sys.argv[1]
+    suning_link(keyword)
+    suning = suning_detail(keyword)
+    suning.getShopUrl()
+
+    # for keyword in list:
+    #     csvToMysql(keyword)
+
+
+    # print("请输入关键字：")
     # keyword = input()
-    # keyword = sys.argv[1]
     # suning_link(keyword)
     # suning = suning_detail(keyword)
     # suning.getShopUrl()
-    for keyword in list:
-        csvToMysql(keyword)
 
 
