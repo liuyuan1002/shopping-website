@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="hechanglin.cn">
-    <link rel="icon" href="favicon.ico">
     <title>爬虫运行管理</title>
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/style.css" rel="stylesheet">
@@ -151,7 +150,7 @@
         </tr>
         {% for i in pclist %}
             <tr class="td">
-            <td style="width: 100px" id="pcid">{{ i.id }}</td>
+            <td style="width: 100px"> <p id="pcid">{{ i.id }}</p></td>
             <td style="width: 100px"> {{ i.processName }}</td>
             <td style="width: 100px"> {{ i.name }}</td>
             <td style="width: 80px"> {{ i.status }}</td>
@@ -190,12 +189,14 @@
     }
     return cookieValue;
 }
-    function startCommand(){
+
+        function startCommand(){
+        var pcid = $('#pcid').html()
         var  command =$('#command').val();
         if (command==null)
             return false;
 {#        var index = table.getElementsByTagName("tr")[this.index + 1];#}
-        var  pcid = 1;
+{#        var pcid = 1;#}
         $.ajax({
             url:'/console/ajax/',
             type:'POST',
@@ -220,94 +221,9 @@
 {#                console.log('message: ' + e.data);//打印服务端返回的数据#}
 {#                $('#messagecontainer').prepend('<p>' + e.data + '</p>');#}
 {#            };#}
-
     }
 
 </script>
 
-
-{#    <script>#}
-{#    var table2=$('#table2').DataTable({#}
-{#        "bStateSave": false,#}
-{#        "lengthMenu": [[10,-1], ["10","全部"]],#}
-{#        "ajax": {#}
-{#        "url": "get_spider_log.php",#}
-{#        "type": "post",#}
-{#        "data": function ( d ) {#}
-{#            d.spider = $('#spider').val();#}
-{#        },#}
-{#        "error":function(){alert("服务器未正常响应，请重试");},#}
-{#        },#}
-{#        "columns": [#}
-{#            { "data": "time", "title":"时间","defaultContent":"","width":"140px"},#}
-{#            { "data": "content", "title":"内容","defaultContent":""},#}
-{#        ],#}
-{#        "createdRow": function ( row, data, index ) {#}
-{##}
-{#        },#}
-{#        "order": [[ 0, "desc" ]],#}
-{#    });#}
-{##}
-{#    $("#table tbody").on("click",".start-spider",function(){#}
-{#        var command=prompt("输入爬虫启动参数","");#}
-{#        if (command==null){#}
-{#            return false;#}
-{#        }#}
-{#        var row = table.row($(this).parents("tr"));#}
-{#        var data= row.data();#}
-{#        /*var postData={#}
-{#            "action":"start",#}
-{#            "spider":data['process_name'],#}
-{#            "command":command,#}
-{#        }*/#}
-{#        data['action']="start";#}
-{#        data['command']=command;#}
-{#        $.ajax({#}
-{#            "url":"spider_controller.php",#}
-{#            "data":data,#}
-{#            "type":"post",#}
-{#            "success":function(response){#}
-{#                alert(response);#}
-{#            }#}
-{#        })#}
-{#    });#}
-{##}
-{#    $("#table tbody").on("click",".stop-spider",function(){#}
-{#        var row = table.row($(this).parents("tr"));#}
-{#        var data= row.data();#}
-{#        /*var postData={#}
-{#            "action":"stop",#}
-{#            "spider":data['process_name'],#}
-{#        }*/#}
-{#        data['action']="stop";#}
-{#        data['command']="";#}
-{#        $.ajax({#}
-{#            "url":"spider_controller.php",#}
-{#            "data":data,#}
-{#            "type":"post",#}
-{#            "success":function(response){#}
-{#                alert(response);#}
-{#            }#}
-{#        })#}
-{#    });#}
-{##}
-{#    $("#table tbody").on("click",".log-btn",function(){#}
-{#        var row = table.row($(this).parents("tr"));#}
-{#        var data= row.data();#}
-{#        $('#spider').val(data['process_name']);#}
-{#        $('#evaluatedModal2').modal();#}
-{#        table2.ajax.reload();#}
-{#    });#}
-{##}
-{#    function table_reflush(){#}
-{#        table.ajax.reload();#}
-{#        table2.ajax.reload();#}
-{#    }#}
-{##}
-{#    var init = setInterval(table_reflush, 2000);#}
-{##}
-{##}
-{##}
-{#</script>#}
 
 </body>

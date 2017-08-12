@@ -2,109 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d098d2a8-cdd7-4fc0-946a-d0b7de57046f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/manItem1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/manItem2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/manItem3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/manItem4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/manItem5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/manItem6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/manItem7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/manItem8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/womanItem1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/womanItem2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/womanItem3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/womanItem4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/womanItem5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/womanItem6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/womanItem7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/womanItem8.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/sn/商品详情/蒙牛甜小嗨/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛甜小嗨/BaseInfo.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/sn/商品详情/蒙牛甜小嗨/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛甜小嗨/CommentInfo.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/sn/商品详情/蒙牛甜小嗨/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛甜小嗨/ImpressionInfo.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawlerConsole/models.py" afterPath="$PROJECT_DIR$/crawlerConsole/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawlerConsole/templates/consoleIndex.html" afterPath="$PROJECT_DIR$/crawlerConsole/templates/consoleIndex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawlerConsole/templates/consoleLogin.html" afterPath="$PROJECT_DIR$/crawlerConsole/templates/consoleLogin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawlerConsole/urls.py" afterPath="$PROJECT_DIR$/crawlerConsole/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawlerConsole/views.py" afterPath="$PROJECT_DIR$/crawlerConsole/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/style.css" afterPath="$PROJECT_DIR$/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taobao/templates/cart.html" afterPath="$PROJECT_DIR$/taobao/templates/cart.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/GetLInk.py" afterPath="$PROJECT_DIR$/static/sn/GetLInk.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/multiprocess.py" afterPath="$PROJECT_DIR$/static/sn/multiprocess.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/snMysql.py" afterPath="$PROJECT_DIR$/static/sn/snMysql.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/suning_BaseInfo.py" afterPath="$PROJECT_DIR$/static/sn/suning_BaseInfo.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/threads.py" afterPath="$PROJECT_DIR$/static/sn/threads.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利qq星/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利qq星/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利qq星/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利qq星/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利qq星/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利qq星/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利qq星/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利qq星/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利优酸乳/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利优酸乳/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利优酸乳/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利优酸乳/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利优酸乳/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利优酸乳/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利优酸乳/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利优酸乳/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利味可滋/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利味可滋/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利味可滋/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利味可滋/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利味可滋/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利味可滋/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利味可滋/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利味可滋/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利安慕希/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利安慕希/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利安慕希/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利安慕希/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利安慕希/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利安慕希/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利安慕希/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利安慕希/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利无菌砖/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利无菌砖/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利无菌砖/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利无菌砖/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利无菌砖/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利无菌砖/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利无菌砖/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利无菌砖/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利纯牛奶/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利纯牛奶/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利纯牛奶/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利纯牛奶/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利纯牛奶/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利纯牛奶/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利纯牛奶/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利纯牛奶/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利舒化奶/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利舒化奶/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利舒化奶/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利舒化奶/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利舒化奶/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利舒化奶/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利舒化奶/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利舒化奶/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利谷粒多/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利谷粒多/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利谷粒多/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利谷粒多/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利谷粒多/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利谷粒多/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利谷粒多/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利谷粒多/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利金典有机纯牛奶/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利金典有机纯牛奶/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利金典有机纯牛奶/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利金典有机纯牛奶/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利金典有机纯牛奶/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利金典有机纯牛奶/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/伊利金典有机纯牛奶/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/伊利金典有机纯牛奶/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/特仑苏/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/特仑苏/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/特仑苏/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/特仑苏/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/特仑苏/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/特仑苏/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/特仑苏/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/特仑苏/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/甜小嗨/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/甜小嗨/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/甜小嗨/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/甜小嗨/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/甜小嗨/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/甜小嗨/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/甜小嗨/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/甜小嗨/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛奶特/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛奶特/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛奶特/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛奶特/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛奶特/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛奶特/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛奶特/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛奶特/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛新养道/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛新养道/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛新养道/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛新养道/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛新养道/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛新养道/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛新养道/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛新养道/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛早餐奶/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛早餐奶/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛早餐奶/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛早餐奶/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛早餐奶/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛早餐奶/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛早餐奶/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛早餐奶/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛真果粒/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛真果粒/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛真果粒/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛真果粒/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛真果粒/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛真果粒/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛真果粒/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛真果粒/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛纯牛奶/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛纯牛奶/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛纯牛奶/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛纯牛奶/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛纯牛奶/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛纯牛奶/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛纯牛奶/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛纯牛奶/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛纯甄/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛纯甄/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛纯甄/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛纯甄/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛纯甄/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛纯甄/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛纯甄/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛纯甄/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛谷粒早餐/BaseInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛谷粒早餐/BaseInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛谷粒早餐/CommentInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛谷粒早餐/CommentInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛谷粒早餐/ImpressionInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛谷粒早餐/ImpressionInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品详情/蒙牛谷粒早餐/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛谷粒早餐/ShopInfo.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/伊利qq星.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/伊利qq星.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/伊利优酸乳.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/伊利优酸乳.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/伊利味可滋.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/伊利味可滋.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/伊利安慕希.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/伊利安慕希.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/伊利无菌砖.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/伊利无菌砖.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/伊利纯牛奶.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/伊利纯牛奶.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/伊利舒化奶.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/伊利舒化奶.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/伊利谷粒多.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/伊利谷粒多.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/伊利金典有机纯牛奶.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/伊利金典有机纯牛奶.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/特仑苏.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/特仑苏.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/甜小嗨.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/甜小嗨.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/蒙牛奶特.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/蒙牛奶特.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/蒙牛新养道.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/蒙牛新养道.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/蒙牛早餐奶.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/蒙牛早餐奶.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/蒙牛真果粒.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/蒙牛真果粒.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/蒙牛纯牛奶.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/蒙牛纯牛奶.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/蒙牛纯甄.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/蒙牛纯甄.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/商品链接/蒙牛谷粒早餐.txt" afterPath="$PROJECT_DIR$/static/sn/商品链接/蒙牛谷粒早餐.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sn/苏宁商品详情.py" afterPath="$PROJECT_DIR$/static/sn/苏宁商品详情.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/sn/商品详情/蒙牛甜小嗨/ShopInfo.csv" afterPath="$PROJECT_DIR$/static/sn/商品详情/蒙牛甜小嗨/ShopInfo.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taobao/admin.py" afterPath="$PROJECT_DIR$/taobao/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taobao/templates/homeTextiles.html" afterPath="$PROJECT_DIR$/taobao/templates/homeTextiles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taobao/templates/hot.html" afterPath="$PROJECT_DIR$/taobao/templates/hot.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taobao/templates/index.html" afterPath="$PROJECT_DIR$/taobao/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taobao/templates/kitchen.html" afterPath="$PROJECT_DIR$/taobao/templates/kitchen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taobao/templates/nav.html" afterPath="$PROJECT_DIR$/taobao/templates/nav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taobao/urls.py" afterPath="$PROJECT_DIR$/taobao/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taobao/views.py" afterPath="$PROJECT_DIR$/taobao/views.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/images/cc.png" afterPath="$PROJECT_DIR$/static/images/type/1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/images/jf.png" afterPath="$PROJECT_DIR$/static/images/type/2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/images/remai.png" afterPath="$PROJECT_DIR$/static/images/type/0.png" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -135,108 +67,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlerConsole/models.py">
+      <file leaf-file-name="carousel.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taobao/templates/carousel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="-416">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlerConsole/urls.py">
+      <file leaf-file-name="cart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taobao/templates/cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="21">
+              <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suning_BaseInfo.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/sn/suning_BaseInfo.py">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taobao/templates/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="555" column="26" selection-start-line="555" selection-start-column="26" selection-end-line="555" selection-end-column="26" />
-              <folding>
-                <element signature="e#12#27#0" expanded="true" />
-                <element signature="e#288#708#0" expanded="false" />
-                <element signature="e#297#316#0" expanded="false" />
-                <element signature="e#723#1089#0" expanded="false" />
-                <element signature="e#1122#6283#0" expanded="false" />
-                <element signature="e#1458#1541#0" expanded="false" />
-                <element signature="e#1554#2150#0" expanded="false" />
-                <element signature="e#2205#3573#0" expanded="false" />
-                <element signature="e#3634#4244#0" expanded="false" />
-                <element signature="e#4299#5379#0" expanded="false" />
-                <element signature="e#5437#6283#0" expanded="false" />
-                <element signature="e#6312#6698#0" expanded="false" />
-                <element signature="e#6727#18479#0" expanded="false" />
-                <element signature="e#8136#9184#0" expanded="false" />
-                <element signature="e#11847#12186#0" expanded="false" />
-                <element signature="e#12234#12412#0" expanded="false" />
-                <element signature="e#12460#12986#0" expanded="false" />
-                <element signature="e#13028#14825#0" expanded="false" />
-                <element signature="e#18506#19692#0" expanded="false" />
-                <marker date="1502110857303" expanded="true" signature="2212:2369" ph="INSERT INTO sn_baseinfo... " />
-                <marker date="1502110857303" expanded="true" signature="3641:3709" ph="INSERT INTO sn_impressioninfo... " />
-                <marker date="1502110857303" expanded="true" signature="4306:4421" ph="INSERT INTO sn_shopinfo... " />
-                <marker date="1502110857303" expanded="true" signature="5444:5529" ph="INSERT INTO sn_CommentInfo... " />
-              </folding>
+            <state relative-caret-position="-338">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/sn/1.py">
+      <file leaf-file-name="homeTextiles.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taobao/templates/homeTextiles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1242">
-              <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <marker date="1502109442420" expanded="true" signature="1470:1555" ph="INSERT INTO sn_CommentInfo... " />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consoleIndex.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlerConsole/templates/consoleIndex.html">
+      <file leaf-file-name="nav.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/taobao/templates/nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1301">
-              <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-              <folding>
-                <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#4;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#5;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#span#0;n#td#5;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#4021#4027#0#HTML" expanded="true" />
-                <element signature="e#4027#4033#0#HTML" expanded="true" />
-                <element signature="e#4033#4039#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#7;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="230">
+              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlerConsole/views.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/taobao/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
+            <state relative-caret-position="346">
+              <caret line="159" column="47" selection-start-line="149" selection-start-column="0" selection-end-line="159" selection-end-column="47" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
-                <element signature="e#715#974#0" expanded="false" />
-                <element signature="e#2120#2306#0" expanded="false" />
+                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#1047#2081#0" expanded="false" />
+                <element signature="e#2125#2958#0" expanded="false" />
+                <element signature="e#3327#3420#0" expanded="false" />
+                <element signature="e#3457#3899#0" expanded="false" />
+                <element signature="e#3934#4469#0" expanded="false" />
+                <element signature="e#5058#5397#0" expanded="false" />
+                <element signature="e#6312#6707#0" expanded="false" />
+                <element signature="e#6739#7118#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -248,8 +143,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -282,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/taobao/__init__.py" />
         <option value="$PROJECT_DIR$/templates/css/st.css" />
         <option value="$PROJECT_DIR$/pc2.py" />
         <option value="$PROJECT_DIR$/templates/carousel.html" />
@@ -307,17 +201,13 @@
         <option value="$PROJECT_DIR$/taobao/models.py" />
         <option value="$PROJECT_DIR$/templates/homeTextiles.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/taobao/urls.py" />
-        <option value="$PROJECT_DIR$/taobao/admin.py" />
         <option value="$PROJECT_DIR$/templates/cart.html" />
         <option value="$PROJECT_DIR$/taobao/templates/login.html" />
         <option value="$PROJECT_DIR$/crawlerConsole/templates/login.html" />
         <option value="$PROJECT_DIR$/crawlerConsole/templates/index1.html" />
         <option value="$PROJECT_DIR$/crawlerConsole/templates/index.html" />
-        <option value="$PROJECT_DIR$/taobao/views.py" />
         <option value="$PROJECT_DIR$/sn/suning_BaseInfo.py" />
         <option value="$PROJECT_DIR$/crawlerConsole/admin.py" />
-        <option value="$PROJECT_DIR$/crawlerConsole/templates/consoleLogin.html" />
         <option value="$PROJECT_DIR$/templates/URL403.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/project/settings.py" />
@@ -326,10 +216,18 @@
         <option value="$PROJECT_DIR$/crawlerConsole/models.py" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/crawlerConsole/views.py" />
-        <option value="$PROJECT_DIR$/crawlerConsole/urls.py" />
-        <option value="$PROJECT_DIR$/crawlerConsole/templates/consoleIndex.html" />
         <option value="$PROJECT_DIR$/static/sn/1.py" />
         <option value="$PROJECT_DIR$/static/sn/suning_BaseInfo.py" />
+        <option value="$PROJECT_DIR$/crawlerConsole/urls.py" />
+        <option value="$PROJECT_DIR$/crawlerConsole/templates/consoleLogin.html" />
+        <option value="$PROJECT_DIR$/crawlerConsole/templates/consoleIndex.html" />
+        <option value="$PROJECT_DIR$/learnjs.html" />
+        <option value="$PROJECT_DIR$/taobao/admin.py" />
+        <option value="$PROJECT_DIR$/taobao/urls.py" />
+        <option value="$PROJECT_DIR$/taobao/templates/hot.html" />
+        <option value="$PROJECT_DIR$/taobao/templates/classify.html" />
+        <option value="$PROJECT_DIR$/taobao/templates/nav.html" />
+        <option value="$PROJECT_DIR$/taobao/views.py" />
       </list>
     </option>
   </component>
@@ -389,7 +287,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -418,11 +315,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="taobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping-website" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sn" />
+              <option name="myItemId" value="taobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping-website" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taobao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,27 +379,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shopping-website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shopping-website" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="crawlerConsole" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -482,17 +402,18 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workspace\PycharmProjects\shopping-website\static" />
-      <recent name="E:\workspace\PycharmProjects\shopping-website\taobao" />
-      <recent name="D:\Django\project\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\workspace\PycharmProjects\shopping-website" />
       <recent name="E:\workspace\PycharmProjects\shopping-website\crawlerConsole" />
       <recent name="E:\workspace\PycharmProjects\shopping-website\sn" />
       <recent name="D:\Django\project\static\images" />
       <recent name="D:\Django\project\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace\PycharmProjects\shopping-website\static\images\type" />
+      <recent name="E:\workspace\PycharmProjects\shopping-website\static" />
+      <recent name="E:\workspace\PycharmProjects\shopping-website\taobao" />
+      <recent name="D:\Django\project\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -888,26 +809,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18835099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16641453" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.37594554" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4885246" sideWeight="0.6240545" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.029508196" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22459017" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1557377" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4885246" sideWeight="0.6240545" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1557377" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -962,205 +883,34 @@
           <line>2</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/taobao/urls.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/crawlerConsole/templates/consoleIndex.html</url>
+          <line>199</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/cart/__init__.py" />
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/cart/models.py" />
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/notebook/static/style/style.min.css" />
-    <entry file="file://$PROJECT_DIR$/taobao/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="126" selection-start-line="2" selection-start-column="126" selection-end-line="2" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-148">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/carousel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/loginBase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/homeTextiles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/hot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/kitchen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Anaconda3/Lib/site-packages/django/core/handlers/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="125" column="39" selection-start-line="125" selection-start-column="39" selection-end-line="125" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/sn/商品链接/特仑苏.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/sn/商品链接/伊利安慕希.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/sn/商品链接/蒙牛奶特.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlerConsole/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlerConsole/templates/index1.html" />
-    <entry file="file://D:/Anaconda3/Lib/site-packages/django/contrib/auth/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlerConsole/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/taobao/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-92">
           <caret line="5" column="48" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="66" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/URL403.html" />
-    <entry file="file://$PROJECT_DIR$/taobao/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlerConsole/templates/consoleLogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/goods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1168,23 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="4" column="2847" selection-start-line="4" selection-start-column="2847" selection-end-line="4" selection-end-column="2847" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlerConsole/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/cart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1192,23 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-793">
           <caret line="99" column="33" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1216,15 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,9 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1242,50 +946,264 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1420503">
           <caret line="60103" column="0" selection-start-line="60103" selection-start-column="0" selection-end-line="60103" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taobao/views.py">
+    <entry file="file://$PROJECT_DIR$/cmdlog.txt" />
+    <entry file="file://$PROJECT_DIR$/extract_feature.py" />
+    <entry file="file://$PROJECT_DIR$/static/sn/1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-460">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="17" />
+        <state relative-caret-position="-522">
+          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlerConsole/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/sn/suning_BaseInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlerConsole/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="35" />
           <folding>
-            <element signature="e#973#2007#0" expanded="false" />
-            <element signature="e#3383#3825#0" expanded="false" />
-            <element signature="e#3845#3996#0" expanded="false" />
-            <element signature="e#4020#4173#0" expanded="false" />
-            <element signature="e#4194#4350#0" expanded="false" />
-            <element signature="e#6095#6474#0" expanded="false" />
+            <element signature="e#0#44#0" expanded="false" />
+            <element signature="e#715#974#0" expanded="false" />
+            <element signature="e#2120#2306#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlerConsole/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="24">
           <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-921">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="267">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmdlog.txt">
+    <entry file="file://$PROJECT_DIR$/crawlerConsole/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="5" column="55" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlerConsole/templates/consoleLogin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1564">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlerConsole/templates/consoleIndex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#3988#3994#0#HTML" expanded="true" />
+            <element signature="e#3994#4000#0#HTML" expanded="true" />
+            <element signature="e#4000#4006#0#HTML" expanded="true" />
+            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnjs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/templates/kitchen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/templates/hot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="14" />
+          <folding>
+            <element signature="e#232#256#0#HTML" expanded="false" />
+            <element signature="e#1127#1185#0#HTML" expanded="false" />
+            <element signature="e#1256#1261#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/type/0.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/womanItem3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/womanItem1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/manItem3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/item3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/type/2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/type/1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/bg_body.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/baotao.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/btn_1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/carousel_2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/ico_03.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/ico_02.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/images/ico_04.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/templates/classify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+          <folding>
+            <element signature="e#1631#1657#0#HTML" expanded="true" />
+            <element signature="e#1673#1693#0#HTML" expanded="true" />
+            <element signature="e#1777#1783#0#HTML" expanded="true" />
+            <element signature="e#1920#1926#0#HTML" expanded="true" />
+            <element signature="e#2176#2182#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-554">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/templates/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-416">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/templates/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/templates/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1293,97 +1211,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlerConsole/urls.py">
+    <entry file="file://$PROJECT_DIR$/taobao/templates/goods.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="23">
+          <caret line="50" column="62" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlerConsole/views.py">
+    <entry file="file://$PROJECT_DIR$/taobao/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#715#974#0" expanded="false" />
-            <element signature="e#2120#2306#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlerConsole/templates/consoleIndex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1301">
-          <caret line="224" column="0" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#2;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#3;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#5;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#span#0;n#td#5;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4021#4027#0#HTML" expanded="true" />
-            <element signature="e#4027#4033#0#HTML" expanded="true" />
-            <element signature="e#4033#4039#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#7;n#tr#1;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extract_feature.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15248">
-          <caret line="87" column="35" selection-start-line="87" selection-start-column="26" selection-end-line="87" selection-end-column="35" />
+        <state relative-caret-position="-338">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sn/1.py">
+    <entry file="file://$PROJECT_DIR$/taobao/templates/homeTextiles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1502109442420" expanded="true" signature="1470:1555" ph="INSERT INTO sn_CommentInfo... " />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/sn/suning_BaseInfo.py">
+    <entry file="file://$PROJECT_DIR$/taobao/templates/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="555" column="26" selection-start-line="555" selection-start-column="26" selection-end-line="555" selection-end-column="26" />
+        <state relative-caret-position="230">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taobao/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="159" column="47" selection-start-line="149" selection-start-column="0" selection-end-line="159" selection-end-column="47" />
           <folding>
-            <element signature="e#12#27#0" expanded="true" />
-            <element signature="e#288#708#0" expanded="false" />
-            <element signature="e#297#316#0" expanded="false" />
-            <element signature="e#723#1089#0" expanded="false" />
-            <element signature="e#1122#6283#0" expanded="false" />
-            <element signature="e#1458#1541#0" expanded="false" />
-            <element signature="e#1554#2150#0" expanded="false" />
-            <element signature="e#2205#3573#0" expanded="false" />
-            <element signature="e#3634#4244#0" expanded="false" />
-            <element signature="e#4299#5379#0" expanded="false" />
-            <element signature="e#5437#6283#0" expanded="false" />
-            <element signature="e#6312#6698#0" expanded="false" />
-            <element signature="e#6727#18479#0" expanded="false" />
-            <element signature="e#8136#9184#0" expanded="false" />
-            <element signature="e#11847#12186#0" expanded="false" />
-            <element signature="e#12234#12412#0" expanded="false" />
-            <element signature="e#12460#12986#0" expanded="false" />
-            <element signature="e#13028#14825#0" expanded="false" />
-            <element signature="e#18506#19692#0" expanded="false" />
-            <marker date="1502110857303" expanded="true" signature="2212:2369" ph="INSERT INTO sn_baseinfo... " />
-            <marker date="1502110857303" expanded="true" signature="3641:3709" ph="INSERT INTO sn_impressioninfo... " />
-            <marker date="1502110857303" expanded="true" signature="4306:4421" ph="INSERT INTO sn_shopinfo... " />
-            <marker date="1502110857303" expanded="true" signature="5444:5529" ph="INSERT INTO sn_CommentInfo... " />
+            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#1047#2081#0" expanded="false" />
+            <element signature="e#2125#2958#0" expanded="false" />
+            <element signature="e#3327#3420#0" expanded="false" />
+            <element signature="e#3457#3899#0" expanded="false" />
+            <element signature="e#3934#4469#0" expanded="false" />
+            <element signature="e#5058#5397#0" expanded="false" />
+            <element signature="e#6312#6707#0" expanded="false" />
+            <element signature="e#6739#7118#0" expanded="false" />
           </folding>
         </state>
       </provider>

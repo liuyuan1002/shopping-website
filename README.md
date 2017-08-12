@@ -5,6 +5,10 @@
 pip install django-bootstrap-toolkit
 pip install django-cart
 '''
+##2017.08.12
+添加分页功能
+在admin中添加搜索
+
 ##2017.08.06
 添加爬虫app
 增加控制爬虫启动页面

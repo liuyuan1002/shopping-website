@@ -18,7 +18,7 @@
         <script>alert('登录失败！'); history.go(-1);</script>
     {% endif %}
   <center>
-   <form name="form1" action="{% url  'login' %}" onsubmit="return InputCheck(this)" method="post">
+   <form name="form1" action="{% url  'consoleLogin' %}" onsubmit="return InputCheck(this)" method="post">
        {% csrf_token %}
     <div class="container">
         <div class="input-group" style="width: 285px;text-align:center;">

@@ -3,6 +3,7 @@ from taobao import views
 
 urlpatterns = [
     url(r'^$', views.index),
+    url(r'^classify/(\d+)/(\d+)/$',views.classify),
     url(r'^hot$',views.hot),
     url(r'^kitchen',views.kitchen),
     url(r'^homeTextiles',views.home),

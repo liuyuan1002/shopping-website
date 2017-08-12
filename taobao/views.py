@@ -13,6 +13,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 
+from django.core.paginator import  Paginator ,EmptyPage,PageNotAnInteger
+
 
 
 # Create your views here.
@@ -93,8 +95,8 @@ def login_view(req):
 #首页
 def index(req):
     context = user_session(req)
-    cc =  goods.objects.all().filter(category = 0)[:8]
-    jf =  goods.objects.all().filter(category = 1)[:8]
+    cc =  goods.objects.all().filter(category = 1)[:8]
+    jf =  goods.objects.all().filter(category = 2)[:8]
     rm =  goods.objects.order_by('sales_Volume').all()[:8]
     context['cc']= cc
     context['jf'] = jf
@@ -126,24 +128,27 @@ def goodsDetail(req,goods_id):
     context['urlImg'] = urlImg
     return  render(req,'goods.html',context)
 
-def hot(req):
+#分类展示
+def classify(req,type,page):
     context = user_session(req)
-    rm = goods.objects.order_by('sales_Volume').all()[:36]
-    context['rm']=rm
-    return render(req, 'hot.html', context)
+    context['type'] = int(type)
+    if type == '0':
+        goods_list = goods.objects.order_by('sales_Volume').all()
+    else:
+        goods_list = goods.objects.all().filter(category = int(type))
+    paginator = Paginator(goods_list,8)
 
-def kitchen(req):
-    context = user_session(req)
-    cc = goods.objects.all().filter(category = 0)[:16]
-    context['cc'] = cc
-    return render(req, 'kitchen.html', context)
+    try:
+        goodss = paginator.page(int(page))
+    except PageNotAnInteger:
+        goodss = paginator.page(1)
+    except EmptyPage:
+        goodss = paginator.page(paginator.num_pages)
 
-def home(req):
-    context = user_session(req)
-    jf = goods.objects.all().filter(category=1)[:16]
-    context['jf'] = jf
-    return render(req, 'homeTextiles.html', context)
+    context['goods'] = goodss
+    return render(req,'classify.html',context)
 
+#查看购物车
 @login_required(login_url='/taobao/login')
 def cart(req):
     context = user_session(req)
@@ -157,6 +162,7 @@ def cart(req):
     context['good'] = good
     return render(req, 'cart.html', context)
 
+#添加到购物车
 @login_required(login_url='/taobao/login')
 def add_to_cart(req,goods_id,quantity):
     context = user_session(req)

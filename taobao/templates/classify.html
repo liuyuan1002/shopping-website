@@ -1,7 +1,13 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    【宝淘】 热门
+    【宝淘】 {% if type == 0 %}
+    热门
+    {% elif type == 1 %}
+    美味餐厨
+    {% elif type == 2 %}
+    家纺家居
+    {% endif %}
 {% endblock %}
 
 {% block nav %}
@@ -14,13 +20,13 @@
     <div style="margin-top: 20px">
         <div class="w1240">
             <div class="line100"></div>
-            <div class="icon"><img src="/static/images/type/0.png"> <a>热门</a> </div>
+            <div class="icon"><img src="/static/images/type/{{ type }}.png"> <a>{% if type == 0 %}热门{% elif type == 1 %}美味餐厨{% elif type == 2 %}家纺家居{% endif %}</a> </div>
         </div>
     </div>
 
     <div class="w1240">
         <ul class="m-itemList m-itemList-level2Category">
-            {% for i in rm %}
+            {% for i in goods %}
                 <li class="item">
                     <div class="m-product">
                     <span></span>
@@ -41,7 +47,23 @@
                 </div>
                 </li>
             {% endfor %}
+
         </ul>
+    <div style="padding-right:60px">
+        <span style="float: right">
+            <a href="/taobao/classify/{{ type }}/{{ goods.start_index }}"> 第一页 |  &nbsp;</a>
+            {% if goods.has_previous %}
+                <a href="/taobao/classify/{{ type }}/{{ goods.previous_page_number }}"> 上一页 &nbsp;</a>
+                {% if  goods.has_next%}
+                <span> | </span>
+            {% endif %}
+            {% endif %}
+            {% if goods.has_next %}
+                <a href="/taobao/classify/{{ type }}/{{ goods.next_page_number }}"> 下一页 &nbsp;</a>
+            {% endif %}
+             <a href="/taobao/classify/{{ type }}/{{ goods.end_index }}">| 末尾页 </a>
+        </span>
+    </div>
     </div>
     <div class="clear"></div>
 
