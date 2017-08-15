@@ -4,13 +4,13 @@
 		<a class="fl logo " href="#"><img src="/static/images/top_Logo.png" alt=""></a>
 		<div class="fr site-searchbox">
 			<div class="searchbox fl">
-{#			<form action="" accept-charset="utf-8" enctype="multipart/form-data" method="get" class="form-horizontal" id="frm-sub" name="frm-sub">#}
-                <input class="tex fl" type="text"  placeholder="搜索宝淘商品" value="" id="search-text">
-			    <input type="submit" class="butn fr" value="" id="toSearch">
-{#            </form>#}
+			<form action="/taobao/search_name/" accept-charset="utf-8" enctype="multipart/form-data" method="get" class="form-horizontal" >
+                <input class="tex fl" type="text"  placeholder="搜索宝淘商品" value="" name="name">
+			    <button type="submit" class="butn fr" value="" id="toSearch"> </button>
+            </form>
             </div>
             <div class="right-carbox fr">
-    			<a class="shopcar" href=" ">购物车</a>
+    			<a class="shopcar" href="/taobao/cart/">购物车</a>
                 <div class="sub-car-wrap">
                     <div >购物车中还没有商品，赶紧选购吧！</div>
                 </div>

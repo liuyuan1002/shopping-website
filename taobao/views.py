@@ -14,7 +14,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 
 from django.core.paginator import  Paginator ,EmptyPage,PageNotAnInteger
-
+from django.db.models import Q
 
 
 # Create your views here.
@@ -204,8 +204,8 @@ def remove_from_cart(req,goods_id):
     return redirect('/taobao/cart/')
 
 
-def search(req,keyword):
-    good = goods.objects.filter(goods_introduce__contains=keyword)
+def search_name(req):
+    # good = goods.objects.filter(goods_introduce__contains=keyword)
 
     context = {'isLogin': True}
     username = ''
@@ -215,8 +215,12 @@ def search(req,keyword):
         context['isLogin'] = False
     context['username'] = username
 
-    context['goods'] = good
-    context['keyword'] = keyword
+    search_name = req.GET.get("name","")
+    goods_list  = goods.objects.filter(Q(goods_introduce__icontains = search_name) | Q(goods_name__icontains = search_name))
+
+
+    context['goods'] = goods_list
+    context['keyword'] = search_name
 
     return  render(req,'search.html',context)
 
