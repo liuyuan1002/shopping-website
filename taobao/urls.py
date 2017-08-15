@@ -4,9 +4,6 @@ from taobao import views
 urlpatterns = [
     url(r'^$', views.index),
     url(r'^classify/(\d+)/(\d+)/$',views.classify),
-    url(r'^hot$',views.hot),
-    url(r'^kitchen',views.kitchen),
-    url(r'^homeTextiles',views.home),
     url(r'^login$', views.login_view,name='login'),
     url(r'^logout', views.logout_view),
     url(r'^register$', views.register_view,name='register'),
