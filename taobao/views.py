@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django.shortcuts import render,render_to_response
 from django.http import HttpResponse,HttpResponseRedirect
 from django.template import RequestContext
@@ -132,6 +131,11 @@ def goodsDetail(req,goods_id):
 #分类展示
 def classify(req,type,page):
     context = user_session(req)
+    try:
+        type.decode('utf-8')
+        page.decode('utf-8')
+    except:
+        pass
     context['type'] = int(type)
     if type == '0':
         goods_list = goods.objects.order_by('sales_Volume').all()
