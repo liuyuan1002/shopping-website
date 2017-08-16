@@ -140,8 +140,9 @@ def classify(req,type,page):
     if type == '0':
         goods_list = goods.objects.order_by('sales_Volume').all()
     else:
-        goods_list = goods.objects.all().filter(category = int(type))
-    paginator = Paginator(goods_list,8)
+        goods_list = goods.objects.order_by('sales_Volume').all().filter(category = int(type))
+
+    paginator = Paginator(goods_list,8,)
 
     try:
         goodss = paginator.page(int(page))
