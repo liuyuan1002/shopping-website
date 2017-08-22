@@ -23,7 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q55#p0dfe3!&fna7#q30269o9_aig_d5p-dl86#+gz310z19*5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -89,11 +90,11 @@ DATABASES = {
         }
 }
 
-STATIC_ROOT = os.path.join(BASE_DIR,'static/')
+# STATIC_ROOT = os.path.join(BASE_DIR,'static/')
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, 'static'),
-# )
+STATICFILES_DIRS = (
+   os.path.join(BASE_DIR, 'static'),
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

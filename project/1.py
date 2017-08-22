@@ -1,7 +1,16 @@
 import  re
+import random
 
-str ="javascript:Comment.newLoadPaginationOfComment({type:'all',currentPage:1,totalCount:'47',placeId:'100640',productId:'',placeIdType:'PLACE',isPicture:'',isBest:'',isPOI:'Y',isELong:'N'});"
-a = re.findall(r"totalCount:'(.*?)',",str)
+# a = random.sample(range(1,34),6)
+# b = random.randint(1,16)
+# print(a)
+#
+# print(b)
+a = {'ttt':'000'}
+b = {'aaa':'123'}
+a.update(b)
+print(a)
 
-for i in a:
-    print(i)
+print(b)
+
+print(a)

@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from taobao import views
+from taobao import views, views_api
 
 urlpatterns = [
     url(r'^$', views.index),
@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^search_name/$',views.search_name),
     url(r'^additem/(\d+)/(\d+)/$',views.add_to_cart,name='additem-url'),
     url(r'^removeitem/(\d+)/$',views.remove_from_cart,name='removeitem-url'),
+    url(r'^api/',views_api.classify)
 ]
 
