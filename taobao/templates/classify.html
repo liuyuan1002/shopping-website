@@ -17,6 +17,28 @@
     {% include 'carousel.html' %}
 {% endblock %}
 {% block content %}
+    <script>
+    $(document).ready(function () {
+{#        var params = new FormData();#}
+{#        params.append('type', '1');#}
+{#        params.append('page', '1');#}
+        $.ajax({
+            url: 'http://127.0.0.1:8000/taobao/api/',
+            type: 'POST',
+            data: {type:1,page:1},
+            success: function (res) {
+                console.log(res);
+                var goods = res.data
+                var hasNext = res.hasNext
+                var hasPrevios = res.hasPrevios
+                var page = res.page
+                var queryNum = res.queryNum
+                var type = res.type
+            }
+        })
+    })
+</script>
+
     <div style="margin-top: 20px">
         <div class="w1240">
             <div class="line100"></div>
@@ -26,6 +48,8 @@
 
     <div class="w1240">
         <ul class="m-itemList m-itemList-level2Category">
+
+
             {% for i in goods %}
                 <li class="item">
                     <div class="m-product">

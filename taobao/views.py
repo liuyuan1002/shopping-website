@@ -10,7 +10,7 @@ import os
 
 from django.contrib import auth
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login,logout
+from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
 
 from django.core.paginator import  Paginator ,EmptyPage,PageNotAnInteger
@@ -108,7 +108,7 @@ def index(req):
 def logout_view(req):
     #清理cookie里保存username
     #req.session.flush()
-    logout(req)
+    auth.logout(req)
     return redirect('/taobao/')
 
 def goodsDetail(req,goods_id):
