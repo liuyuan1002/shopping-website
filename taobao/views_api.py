@@ -9,7 +9,6 @@ from django.views.decorators.csrf import  csrf_exempt
 @csrf_exempt
 def classify(req):
     context ={'status':200}
-
     type = req.POST.get('type','')
     page = req.POST.get('page','')
 
