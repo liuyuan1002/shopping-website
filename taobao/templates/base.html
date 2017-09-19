@@ -23,6 +23,23 @@
 </head>
 
 <body >
+
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            url: 'http://127.0.0.1:8000/taobao/api/user/',
+            success: function (res) {
+                console.log(res);
+                if(res['isLogin'] == true)
+                    $(isLogin).html( '<a href="/taobao/cart">' + res['username'] + '</a> <a href="/taobao/logout" >退出</a> ');
+                else
+                    $(isLogin).html('<a href="/taobao/login">登录</a> <a class="rt" href="/taobao/register">注册</a>');
+
+            }
+        })
+    })
+</script>
+
 <!--header-->
 <div class="header-bar">
         <div class="w1240">
@@ -30,14 +47,8 @@
                 <a>欢迎来到宝淘</a>
                 <a class="rt" href="/taobao">首页</a>
             </div>
-             <div class="link">
-            {% if isLogin == False%}
-                <a href="/taobao/login">登录</a>
-                <a class="rt" href="/taobao/register">注册</a>
-            {% else%}
-                <a href="/taobao/cart">{{ username }}</a>
-                <a href="/taobao/logout" >退出</a>
-            {% endif %}
+             <div class="link" id = "isLogin">
+
              </div>
               <div class="clear"></div>
         </div>

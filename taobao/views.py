@@ -94,7 +94,7 @@ def login_view(req):
 
 #首页
 def index(req):
-    context = user_session(req)
+    context = {}
     cc =  goods.objects.all().filter(category = 1)[:8]
     jf =  goods.objects.all().filter(category = 2)[:8]
     rm =  goods.objects.order_by('sales_Volume').all()[:8]
@@ -112,7 +112,7 @@ def logout_view(req):
     return redirect('/taobao/')
 
 def goodsDetail(req,goods_id):
-    context = user_session(req)
+    context = {}
     good = goods.objects.get(goods_id__exact=int(goods_id))
 
     context ['good'] = good
@@ -130,34 +130,14 @@ def goodsDetail(req,goods_id):
 
 #分类展示
 def classify(req,type,page):
-    context = user_session(req)
-    try:
-        type.decode('utf-8')
-        page.decode('utf-8')
-    except:
-        pass
-    context['type'] = int(type)
-    if type == '0':
-        goods_list = goods.objects.order_by('sales_Volume').all()
-    else:
-        goods_list = goods.objects.all().filter(category = int(type)).order_by('sales_Volume').all()
-
-    paginator = Paginator(goods_list,8)
-
-    try:
-        goodss = paginator.page(int(page))
-    except PageNotAnInteger:
-        goodss = paginator.page(1)
-    except EmptyPage:
-        goodss = paginator.page(paginator.num_pages)
-
-    context['goods'] = goodss
-    return render(req,'classify.html',context)
+    return render(req,'classify.html')
 
 #查看购物车
 @login_required(login_url='/taobao/login')
 def cart(req):
-    context = user_session(req)
+    context = {}
+    context['username'] = req.session['username']
+
     try:
         user = User_cart.objects.get(username__exact=context['username'])
         good = cartItem.objects.all().filter(username__exact = context['username'])
@@ -171,7 +151,8 @@ def cart(req):
 #添加到购物车
 @login_required(login_url='/taobao/login')
 def add_to_cart(req,goods_id,quantity):
-    context = user_session(req)
+    context = {}
+    context['username'] = req.session['username']
 
     good = goods.objects.get(goods_id__exact=goods_id)
     sum = int(quantity) * good.goods_price
@@ -195,7 +176,8 @@ def add_to_cart(req,goods_id,quantity):
 # https://docs.djangoproject.com/en/1.11/topics/auth/default/#the-login-required-decorator
 @login_required(login_url='/taobao/login')
 def remove_from_cart(req,goods_id):
-    context = user_session(req)
+    context = {}
+    context['username'] = req.session['username']
 
     good = goods.objects.get(goods_id__exact=goods_id)
     good = cartItem.objects.get(goods = good,username = context['username'])
@@ -213,13 +195,8 @@ def remove_from_cart(req,goods_id):
 def search_name(req):
     # good = goods.objects.filter(goods_introduce__contains=keyword)
 
-    context = {'isLogin': True}
-    username = ''
-    if 'username' in req.session:
-        username = req.session['username']
-    else:
-        context['isLogin'] = False
-    context['username'] = username
+    context = {}
+    context['username'] = req.session['username']
 
     search_name = req.GET.get("name","")
     goods_list  = goods.objects.filter(Q(goods_introduce__icontains = search_name) | Q(goods_name__icontains = search_name))

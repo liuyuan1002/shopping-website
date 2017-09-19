@@ -1,13 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    【宝淘】 {% if type == 0 %}
-    热门
-    {% elif type == 1 %}
-    美味餐厨
-    {% elif type == 2 %}
-    家纺家居
-    {% endif %}
+
 {% endblock %}
 
 {% block nav %}
@@ -33,73 +27,75 @@
             }
             return cookieValue;
         }
+        function getdate() {
+            var reg = 'classify/\(\\d+?\)/\(\\d+?\)/';
+            return window.location.href.match(reg);
+        }
     $(document).ready(function () {
+
+        var dat = getdate();
+{#        console.log(dat);#}
+
+        var type = Number(dat[1]);
+        var page = Number(dat[2]);
+
+        if(type == 1)
+            document.title = '【宝淘】 热门';
+        else if(type == 2)
+            document.title = '【宝淘】 美味餐厨';
+        else
+            document.title = '【宝淘】 家纺家居';
+
+        $(icon).html('<img src="/static/images/type/'+ type +'.png">')
+
         $.ajax({
-            url: 'http://127.0.0.1:8000/taobao/api/',
+            url: 'http://127.0.0.1:8000/taobao/api/classify/',
             type: 'POST',
-            data: {type:1,page:1},
+            data: {type:type,page:page},
             headers:{ "X-CSRFtoken":getCookie("csrftoken")},
             success: function (res) {
                 console.log(res);
-{#                var goods = res.data#}
-{#                var hasNext = res.hasNext#}
-{#                var hasPrevios = res.hasPrevios#}
-{#                var page = res.page#}
-{#                var queryNum = res.queryNum#}
-{#                var type = res.type#}
+                var goods = res.data;
+                var hasNext = res.hasNext;
+                var hasPrevios = res.hasPrevios;
+                var page = res.page;
+                var queryNum = res.queryNum;
+                var type = res.type;
+                var endIndex = res.endIndex;
+                //循环输出产品ul
+                $.each(goods,function(index,good) {
+                    $(ulGood).append(' <li class="item"> <div class="m-product"> <span></span> <div class="hd"> <a href="/taobao/goods/' + good.goods_id + '"> <img src="/static/images/goods/' + good.goods_id + '.jpg" class ="img"> </a> </div> <div class="bd"> <a href="/taobao/goods/' + good.goods_id + '"> <h4 class="name">' + good.goods_name + '</h4> </a> <p style="color: #050505;font-weight: bold;text-align:center" >' + good.goods_introduce + '</p> <p class="price">&yen;' + good.goods_price + '</p> <hr> </div> </div> </li>');
+                });
+                $(pagerNav).html('<a href="/taobao/classify/'+ type +'/1"> 第一页 |  &nbsp;</a>');
+                if(hasPrevios) {
+                    $(pagerNav).append(' <a href="/taobao/classify/' + type + '/'+ String(Number(page) - 1) + '"> 上一页 &nbsp;</a>');
+                    if (hasNext)
+                        $(pagerNav).append('<span> | </span>')
+                }
+                if(hasNext)
+                    $(pagerNav).append('<a href="/taobao/classify/'+ type +'/'+ String(Number(page) + 1)+'"> 下一页 &nbsp;</a>');
+                $(pagerNav).append('<a href="/taobao/classify/'+ type +'/'+ endIndex+'">| 末尾页 </a>')
             }
-        })
+        });
+
     })
 </script>
 
     <div style="margin-top: 20px">
         <div class="w1240">
             <div class="line100"></div>
-            <div class="icon"><img src="/static/images/type/{{ type }}.png"> <a>{% if type == 0 %}热门{% elif type == 1 %}美味餐厨{% elif type == 2 %}家纺家居{% endif %}</a> </div>
+            <div class="icon" id = 'icon'> </div>
         </div>
     </div>
 
     <div class="w1240">
-        <ul class="m-itemList m-itemList-level2Category">
-
-
-            {% for i in goods %}
-                <li class="item">
-                    <div class="m-product">
-                    <span></span>
-                    <div class="hd">
-                        <a href="/taobao/goods/{{ i.goods_id }}">
-                            <img src="/static/images/goods/{{ i.goods_id}}.jpg" class ="img">
-                        </a>
-                    </div>
-
-                    <div class="bd">
-                         <a href="/taobao/goods/{{ i.goods_id }}">
-                        <h4 class="name">{{ i.goods_name }}</h4>
-                         </a>
-                         <p style="color: #050505;font-weight: bold;text-align:center" >{{ i.goods_introduce }}</p>
-                        <p class="price">&yen;{{ i.goods_price }}</p>
-                        <hr>
-                    </div>
-                </div>
-                </li>
-            {% endfor %}
-
+        <ul class="m-itemList m-itemList-level2Category" id = 'ulGood'>
+{#            写在js中#}
         </ul>
     <div style="padding-right:60px">
-        <span style="float: right">
-            <a href="/taobao/classify/{{ type }}/{{ goods.start_index }}"> 第一页 |  &nbsp;</a>
-            {% if goods.has_previous %}
-                <a href="/taobao/classify/{{ type }}/{{ goods.previous_page_number }}"> 上一页 &nbsp;</a>
-                {% if  goods.has_next%}
-                <span> | </span>
-            {% endif %}
-            {% endif %}
-            {% if goods.has_next %}
-                <a href="/taobao/classify/{{ type }}/{{ goods.next_page_number }}"> 下一页 &nbsp;</a>
-            {% endif %}
-             <a href="/taobao/classify/{{ type }}/{{ goods.end_index }}">| 末尾页 </a>
+        <span style="float: right" id = "pagerNav">
         </span>
+
     </div>
     </div>
     <div class="clear"></div>

@@ -5,6 +5,17 @@ from django.core.paginator import Paginator ,PageNotAnInteger ,EmptyPage
 
 from django.views.decorators.csrf import  csrf_exempt
 
+def user_session(req):
+    context = {'status': 200}
+    if 'username' in req.session:
+        username = req.session['username']
+        context['isLogin'] = True
+        context['username'] = username
+    else:
+        context['isLogin'] = False
+        context['username'] = ''
+    return JsonResponse(context)
+
 #分类展示
 @csrf_exempt
 def classify(req):
@@ -30,7 +41,7 @@ def classify(req):
         goodss = paginator.page(paginator.num_pages)
 
     context['queryNum'],context['hasPrevios'],context['hasNext'] = len(goodss),goodss.has_previous(),goodss.has_next()
-
+    context['endIndex'] = paginator.num_pages
     data = []
 
     if goodss:
