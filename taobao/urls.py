@@ -3,7 +3,7 @@ from taobao import views, views_api
 
 urlpatterns = [
     url(r'^$', views.index),
-    url(r'^classify/(\d+)/(\d+)/$',views.classify),
+    url(r'^classify/',views.classify),
     url(r'^login$', views.login_view,name='login'),
     url(r'^logout', views.logout_view),
     url(r'^register$', views.register_view,name='register'),
@@ -14,5 +14,6 @@ urlpatterns = [
     url(r'^removeitem/(\d+)/$',views.remove_from_cart,name='removeitem-url'),
     url(r'^api/classify/',views_api.classify),
     url(r'^api/user/',views_api.user_session),
+    url(r'^api/verify_code/',views_api.verifyCode),
 ]
 

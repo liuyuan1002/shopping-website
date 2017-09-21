@@ -1,5 +1,6 @@
 from django.shortcuts import render,render_to_response
 from django.http import HttpResponse,HttpResponseRedirect
+from django.http import JsonResponse
 from django.template import RequestContext
 
 from taobao.models import User_cart,goods,cartItem
@@ -33,22 +34,31 @@ def user_session(req):
         context['username'] = ''
     return context
 
+
 #注册
 @csrf_exempt
 def register_view(req):
-    context = {'inputFormat':True,'userExit':False}
+    context = {'inputFormat':True,'userExit':False,'verify' : True}
     if req.method == 'POST':
         form = UserForm(req.POST)
         if form.is_valid():
             #获得表单数据
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            #添加到数据库
 
+            #验证码检验
+            verifycode = req.POST.get('verifycode').strip().lower()
+            verify = req.session.get('verifycode').lower()
+            if verify != verifycode:
+                context['verify'] = False
+                return render(req,'register.html',context)
+
+            #数据格式是否正确
             if len(username) < 6 or len(password) < 6:
                 context['inputFormat'] = False
                 return render(req,'register.html',context)
 
+            #判断用户是否存在
             user = auth.authenticate(username = username,password = password)
             if user:
                 context['userExit']=True
@@ -61,8 +71,7 @@ def register_view(req):
             req.session['username'] = username
             auth.login(req, user)
             return redirect('/taobao/')
-    else:
-        context = {'isLogin':False}
+
     return  render(req,'register.html',context)
 
 #登陆
@@ -129,7 +138,7 @@ def goodsDetail(req,goods_id):
     return  render(req,'goods.html',context)
 
 #分类展示
-def classify(req,type,page):
+def classify(req):
     return render(req,'classify.html')
 
 #查看购物车

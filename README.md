@@ -1,10 +1,12 @@
 ﻿# shopping-website
 - 购物网站
+    pip install django-bootstrap-toolkit
+    pip install django-cart
+    pip install pillow
 
-''' 
-pip install django-bootstrap-toolkit
-pip install django-cart
-'''
+##2017.9
+添加注册页验证码，进一步修改接口，实现前后端分离
+
 ##2017.08.12
 添加分页功能
 在admin中添加搜索

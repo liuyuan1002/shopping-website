@@ -49,7 +49,7 @@
         $(icon).html('<img src="/static/images/type/'+ type +'.png">')
 
         $.ajax({
-            url: 'http://127.0.0.1:8000/taobao/api/classify/',
+            url: '/taobao/api/classify/',
             type: 'POST',
             data: {type:type,page:page},
             headers:{ "X-CSRFtoken":getCookie("csrftoken")},
