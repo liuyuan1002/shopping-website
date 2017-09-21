@@ -47,8 +47,12 @@ def register_view(req):
             password = form.cleaned_data['password']
 
             #验证码检验
-            verifycode = req.POST.get('verifycode').strip().lower()
-            verify = req.session.get('verifycode').lower()
+            verifycode = req.POST.get('verifycode')
+            verify = req.session.get('verifycode')
+            if verify:
+                verify.strip().lower()
+            if verifycode:
+                verifycode.strip().lower()
             if verify != verifycode:
                 context['verify'] = False
                 return render(req,'register.html',context)

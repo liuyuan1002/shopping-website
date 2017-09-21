@@ -86,7 +86,7 @@ def verifyCode(req):
 
             # font = ImageFont.truetype(font_type, font_size)
             font = ImageFont.truetype('E:\workspace\PycharmProjects\shopping-website\Arial.ttf', random.randint(21, 25))
-
+            # font = ImageFont.truetype(r'home\ubuntu\shopping-website\Arial.ttf', random.randint(21, 25))
             draw.text((random.randint(0, 10), random.randint(0, 5)),
                       strs, font=font, fill=fg_color)
 
