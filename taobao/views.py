@@ -50,9 +50,9 @@ def register_view(req):
             verifycode = req.POST.get('verifycode')
             verify = req.session.get('verifycode')
             if verify:
-                verify.strip().lower()
+                verify = verify.strip().lower()
             if verifycode:
-                verifycode.strip().lower()
+                verifycode = verifycode.strip().lower()
             if verify != verifycode:
                 context['verify'] = False
                 return render(req,'register.html',context)
@@ -81,8 +81,7 @@ def register_view(req):
 #登陆
 @csrf_exempt
 def login_view(req):
-    context = {}
-
+    context = {'verify' : True}
     next_to = req.GET.get('next-to', '/taobao/')
     if req.method == 'POST':
         form = UserForm(req.POST)
@@ -90,6 +89,23 @@ def login_view(req):
             #获取表单用户密码
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
+
+            # 验证码检验
+            verifycode = req.POST.get('verifycode')
+            verify = req.session.get('verifycode')
+
+            if verify:
+                verify = verify.strip().lower()
+            if verifycode:
+                verifycode = verifycode.strip().lower()
+
+            context['v1'] = verifycode
+            context['v2'] = verify
+
+            if verify != verifycode:
+                context['verify'] = False
+                return render(req, 'login.html', context)
+
             #获取的表单数据与数据库进行比较
             user = authenticate(username = username,password = password)
             if user:

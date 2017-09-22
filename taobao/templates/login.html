@@ -2,6 +2,16 @@
 {% block title %} 【宝淘】 用户登陆 {% endblock %}
 
 {% block content %}
+    <script>
+        $(function () {
+            // 添加点击事件 鼠标浮动时变成小手
+            $('#sp').css('cursor', 'pointer').click(function () {
+                // 获取到图片的src路径  换一个新的路径   此代码相当与在原来的基础上增加数据
+                $('#yzm').attr('src', $("#yzm").attr('src')+'?1')
+            })
+        });
+
+    </script>
         <div class="login-center">
         <div class="titbox">宝淘会员登录</div>
             <div class="contwrap">
@@ -10,13 +20,20 @@
                     {% csrf_token %}
                     <input type="text" class="tex" name="username" placeholder="手机号码" ></label>
                     <input type="password" class="tex" name="password" placeholder="登陆密码" value="" >
+                     <input type="text" class="tex" name="verifycode" id = "verifycode" placeholder="请输入验证码">
+                  <span id = "sp" class="tex"><img src="/taobao/api/verify_code/" id="yzm"><span >&nbsp;看不清,换一张</span></span>
 
                     {% if pawd == False %}
                         <div class="pswd">
                         账号或者密码错误！请重新输入！
 {#                        <script>alert('登录失败！'); history.go(-1);</script>#}
-                    </div>
+                        </div>
                    {% endif %}
+                    {% if verify == False%}
+                        <p class="red-p"> 验证码错误，请重新输入</p>
+                    {% endif %}
+                {{ v1 }}
+              {{ v2 }}
                     <input type="submit" class="submit" value="立即登录">
                 </form>
 

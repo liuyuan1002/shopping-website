@@ -1,11 +1,70 @@
+#coding=utf-8
 from taobao.models import goods
 
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.core.paginator import Paginator ,PageNotAnInteger ,EmptyPage
 
+from django.contrib import auth
+from django.contrib.auth.models import User
+from .forms import UserForm
+from django.contrib.auth import authenticate
+from django.contrib.auth.decorators import login_required
+
 from django.views.decorators.csrf import  csrf_exempt
 import io
+
+#注册
+@csrf_exempt
+def register_view(req):
+    '''
+    :param req:
+    :type POST: username,password,verifcode
+
+    :return: status = {200:成功
+
+    }
+    '''
+    context = {'inputFormat':True,'userExit':False,'verify' : True}
+    if req.method == 'POST':
+        form = UserForm(req.POST)
+        if form.is_valid():
+            #获得表单数据
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+
+
+            #验证码检验
+            verifycode = req.POST.get('verifycode')
+            verify = req.session.get('verifycode')
+            if verify:
+                verify = verify.strip().lower()
+            if verifycode:
+                verifycode = verifycode.strip().lower()
+            if verify != verifycode:
+                context['verify'] = False
+                return render(req,'register.html',context)
+
+            #数据格式是否正确
+            if len(username) < 6 or len(password) < 6:
+                context['inputFormat'] = False
+                return render(req,'register.html',context)
+
+            #判断用户是否存在
+            user = auth.authenticate(username = username,password = password)
+            if user:
+                context['userExit']=True
+                return render(req, 'register.html', context)
+
+            user = User.objects.create_user(username=username, password=password)
+            user.save()
+            User_cart.objects.create(username=username).save()
+
+            req.session['username'] = username
+            auth.login(req, user)
+            return redirect('/taobao/')
+
+    return  render(req,'register.html',context)
 
 #验证码制作，str存session中，图片返回。
 def verifyCode(req):
@@ -86,7 +145,7 @@ def verifyCode(req):
 
             # font = ImageFont.truetype(font_type, font_size)
             font = ImageFont.truetype('E:\workspace\PycharmProjects\shopping-website\Arial.ttf', random.randint(21, 25))
-            # font = ImageFont.truetype(r'home\ubuntu\shopping-website\Arial.ttf', random.randint(21, 25))
+            # font = ImageFont.truetype(r'/home/ubuntu/shopping-website/Arial.ttf', random.randint(21, 25))
             draw.text((random.randint(0, 10), random.randint(0, 5)),
                       strs, font=font, fill=fg_color)
 
@@ -117,10 +176,15 @@ def verifyCode(req):
     return HttpResponse(buf.getvalue(), 'image/png')
 
 
-
 #判断用户是否登录
+@csrf_exempt
 def user_session(req):
-    context = {'status': 200}
+    '''
+    url = r'^api/user/'
+    :param req:
+    :return:
+    '''
+    context = {'status': 200,'msg':'已登录'}
     if 'username' in req.session:
         username = req.session['username']
         context['isLogin'] = True
@@ -128,7 +192,9 @@ def user_session(req):
     else:
         context['isLogin'] = False
         context['username'] = ''
+        context['msg'] = '未登录'
     return JsonResponse(context)
+
 
 #分类展示
 @csrf_exempt
